@@ -1,0 +1,21 @@
+// Load external libraries
+@import '_bootstrap';
+@import '~@glidejs/glide/dist/css/glide.core.min.css';
+
+// Load general styling
+@import '_variables';
+@import '_type';
+@import '_utilities';
+@import '_buttons';
+
+// Load components
+@import 'components/card.scss';
+@import 'components/carousel.scss';
+@import 'components/challenge.scss';
+@import 'components/contact.scss';
+@import 'components/footer.scss';
+@import 'components/header.scss';
+@import 'components/landing.scss';
+@import 'components/modal.scss';
+@import 'components/nav.scss';
+@import 'components/steps.scss';

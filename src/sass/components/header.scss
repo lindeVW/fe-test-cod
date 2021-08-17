@@ -1,0 +1,38 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 8000;
+
+  &--scrolled {
+    box-shadow: 0 -.2rem 1.2rem rgba($black, .12);
+  }
+}
+
+.header__top {
+  --text-color: #{$white};
+  background-color: $black;
+  padding: 1.2rem 0;
+}
+
+.header__main {
+  --text-color: #{$white};
+  padding: 2.8rem 0;
+  background-color: transparent;
+  transition: background-color .2s;
+
+  .header--scrolled & {
+    --text-color: #{$black};
+    background-color: $white;
+  }
+}
+
+.header__logo {
+  color: var(--text-color);
+  transition: color .2s;
+
+  &:hover {
+    color: var(--text-color);
+  }
+}

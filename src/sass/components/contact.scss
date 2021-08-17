@@ -1,0 +1,22 @@
+.contact {
+  padding-top: 50vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  background-image: url(../assets/contact.jpg);
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  @include media-breakpoint-up(xl) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-position: center left;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    background-position: center left;
+  }
+}

@@ -1,0 +1,66 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .12s;
+
+  &--open {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  &__backdrop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: $black;
+    opacity: .5;
+  }
+
+  &__content {
+    --text-color: #{$black};
+
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    padding: 2rem 4rem;
+    background-color: $white;
+    color: var(--text-color);
+
+    @include media-breakpoint-up(md) { padding: 4rem 6rem; }
+    @include media-breakpoint-up(lg) { padding: 6rem 8rem; }
+    @include media-breakpoint-up(xl) { padding: 8rem 10rem; }
+  }
+
+  &__button {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    background: none;
+    border: none;
+    outline: none;
+
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    background-image: url(../assets/close.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,45 @@
+.glide__arrows {
+  --bs-gutter-x: 2rem;
+  margin-bottom: 2rem;
+}
+
+.glide__arrow {
+  position: relative;
+
+  display: block;
+  width: 2.4rem;
+  height: .7rem;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-image: url(../assets/arrow-dark.svg);
+    transition: transform .28s ease-out;
+  }
+
+  &:hover::before {
+    transform: translateX(1rem);
+  }
+
+  &--prev {
+    transform: rotate(180deg);
+  }
+}
+
+.carousel-container {
+  overflow-x: hidden;
+
+  .glide,
+  .glide__track {
+    overflow: visible;
+  }
+}

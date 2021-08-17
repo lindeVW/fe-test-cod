@@ -1,0 +1,133 @@
+.btn {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  color: var(--text-color);
+
+  border: thin solid transparent;
+  transition: background-color .28s, border-color .28s;
+}
+
+.btn--arrow {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    content: '';
+    display: block;
+    margin-left: 1rem;
+    width: 2.4rem;
+    height: .7rem;
+
+    background-image: url(../assets/arrow-dark.svg);
+    background-size: contain;
+    background-position: center left;
+    background-repeat: no-repeat;
+
+    transition: transform .28s ease-out;
+  }
+
+  &:hover::after {
+    transform: translateX(1rem);
+  }
+}
+
+.btn--padded {
+  padding: 1.4rem 2.8rem;
+  min-width: 16rem;
+  text-align: center;
+}
+
+.btn--primary {
+  @extend .btn--padded;
+  @extend .btn--arrow;
+  background-color: $black;
+  border: thin solid $black;
+  color: $white;
+
+  &::after {
+    background-image: url(../assets/arrow-white.svg);
+  }
+
+  &:hover {
+    background-color: $dark;
+    border-color: $dark;
+    color: $white;
+  }
+
+  .text-white & {
+    background-color: $white;
+    border-color: $white;
+    color: $black;
+
+    &::after {
+      background-image: url(../assets/arrow-dark.svg);
+    }
+
+    &:hover {
+      background-color: $primary;
+      border-color: $primary;
+      color: $black;
+    }
+  }
+}
+
+.btn--secondary {
+  @extend .btn--padded;
+  @extend .btn--arrow;
+  background-color: transparent;
+  border: thin solid $black;
+  color: $black;
+
+  &:hover {
+    color: $black;
+  }
+
+  .text-white & {
+    border-color: $white;
+    color: $white;
+
+    &::after {
+      background-image: url(../assets/arrow-white.svg);
+    }
+
+    &:hover {
+      border-color: $white;
+      color: $white;
+    }
+  }
+}
+
+.btn--link {
+  @extend .btn--arrow;
+  color: $black;
+
+  &:hover {
+    color: $black;
+  }
+
+  .text-white & {
+    color: $white;
+
+    &::after {
+      background-image: url(../assets/arrow-white.svg);
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.btn--text {
+  border-bottom: thin solid transparent;
+  transition: border-bottom-color .12s;
+
+  &:hover {
+    color: var(--text-color);
+    border-bottom-color: var(--text-color);
+  }
+}

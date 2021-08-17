@@ -1,0 +1,31 @@
+.nav__container {
+  --bs-gutter-y: 0;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.nav__list {
+  --bs-gutter-x: 4rem;
+  --bs-gutter-y: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__link {
+  background: none;
+  border: none;
+  outline: none;
+
+  color: var(--text-color);
+  text-decoration: none;
+  border-bottom: thin solid transparent;
+
+  transition: border-bottom-color .12s, color .2s;
+
+  &:hover {
+    border-bottom-color: var(--text-color);
+    color: var(--text-color);
+    text-decoration: none;
+  }
+}

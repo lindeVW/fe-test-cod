@@ -1,0 +1,35 @@
+.footer {
+  padding-top: 3.2rem;
+  margin-top: 8rem;
+  background-color: $primary;
+  background-image: url(../assets/footer.svg);
+  background-position: top center;
+  background-repeat: repeat-x;
+
+  .h6 {
+    margin-bottom: 2.8rem;
+    text-transform: none;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  a:not(.btn) {
+    color: var(--text-color);
+    text-decoration: none;
+    border-bottom: thin solid transparent;
+    transition: border-bottom-color .12s;
+
+    &:hover {
+      border-bottom-color: var(--text-color);
+    }
+  }
+
+  .footer__bottom {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    ul {
+      --bs-gutter-y: 0;
+    }
+  }
+}

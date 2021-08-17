@@ -1,0 +1,81 @@
+// Text
+
+.text-white {
+  --text-color: #{$white};
+  color: var(--text-color);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.list-unstyled {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Background
+
+.bg-primary {
+  background-color: $primary;
+}
+
+.bg-secondary {
+  background-color: $secondary;
+}
+
+.bg-black {
+  background-color: $black;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+// Flex
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+// Size
+
+.w-100 {
+  width: 100%;
+  height: auto;
+}
+
+.img-inline {
+  max-width: 100%;
+  height: auto;
+}
+
+// Spacing
+
+.spacing {
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
+}
+
+.mb {
+  margin-bottom: 4rem;
+
+  &--small {
+    margin-bottom: 2rem;
+  }
+}
+
+.pt {
+  padding-top: 6.4rem;
+}
+
+.pt-lg {
+  @include media-breakpoint-up (lg) {
+    padding-top: 10rem;
+  }
+}

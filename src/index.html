@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end test</title>
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="js-header header">
+        <div class="header__top text-white py-3">
+            <div class="container">
+                <div class="row nav__container">
+                    <div class="col-auto">
+                        <a href="#" class="btn btn--link">
+                            Maak een afspraak voor je huidanalyse
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <nav class="header__top-nav">
+                            <ul class="nav__list row">
+                                <li class="nav__item col-auto">
+                                    <a href="#" class="nav__link">
+                                        Magazine
+                                    </a>
+                                </li>
+                                <li class="nav__item col-auto">
+                                    <a href="#" class="nav__link">
+                                        Events
+                                    </a>
+                                </li>
+                                <li class="nav__item col-auto">
+                                    <a href="#" class="nav__link">
+                                        Contact
+                                    </a>
+                                </li>
+                                <li class="nav__item col-auto" id="vue">
+                                    <modal>
+                                        <h2>log in</h2>
+                                    </modal>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__main">
+            <div class="container">
+                <div class="row nav__container">
+                    <div class="col-auto">
+                        <a href="#" class="header__logo">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="266.454" height="39.83"
+                                viewBox="0 0 266.454 39.83"
+                            >
+                                <title>the happy skin</title>
+                                <g transform="translate(-216.936 -458)">
+                                    <g transform="translate(216.936 458.441)">
+                                        <path
+                                            d="M220.062,481.974V471.2h-3.126v-3.176h3.3l.075-6.868h2.022v6.868h8.766V471.2h-8.766v10.348c.085,3.034,1.391,4.172,8.175,3.961v3.5c-.675.042-1.305.042-1.9.042-6.4,0-8.545-2.149-8.545-7.079"
+                                            transform="translate(-216.936 -459.295)"
+                                            fill="currentColor"
+                                        />
+                                        <path
+                                            d="M242,458.792h2.182v14.073h.126A10.464,10.464,0,0,1,254,466.8c4.677,0,7.289,3.539,7.289,8.806v12.682h-2.141V476.868c0-4.087-1.306-6.068-6.7-6.068-7.037,0-8.174,4.3-8.174,7.163v10.323H242Z"
+                                            transform="translate(-223.711 -458.655)"
+                                            fill="currentColor"
+                                        />
+                                        <path
+                                            d="M289.043,478.937c0-1.727-1.222-5.056-7.626-5.056-6.657,0-8.217,2.781-8.217,5.056Zm-17.57,1.77c0-6.068,4.087-10.829,10.112-10.829,4.846,0,9.059,3.161,9.059,10.491v2.36H273.116c0,2.612,2.233,4.845,8.469,5.056,4.8-.126,7.247-1.054,7.247-3.5h1.728c0,3.792-3.624,7.5-8.975,7.5-6.825,0-10.112-4.972-10.112-11.082"
+                                            transform="translate(-231.676 -461.651)"
+                                            fill="currentColor"
+                                        />
+                                        <path
+                                            d="M368.475,482.01l-5.115-.042c-6.778,0-9.635.938-9.635,3.069,0,1.791,1.918,2.729,5.883,2.729,3.752,0,8.484-2.047,8.867-5.755m-16.5,3.112c0-5.029,4.221-6.991,10.445-6.991h6.138c-.171-4.262-2.515-4.647-7.247-4.647-4.86,0-6.736,1.705-6.736,3.027h-1.748c0-4.135,4.69-7.076,8.782-7.076,5.371,0,8.525,2.942,8.525,8.952v12.875H368.3l.042-3.709c-1.279,2.431-4.646,4.264-8.44,4.264-4.092,0-7.929-2.388-7.929-6.694"
+                                            transform="translate(-253.434 -461.531)"
+                                            fill="currentColor"
+                                        />
+                                        <path
+                                            d="M399.937,480.923c0-4.518-2.132-7.2-7.972-7.2-5.712,0-7.888,2.686-7.888,7.2,0,4.391,2.175,7.033,7.888,7.033,5.839,0,7.972-2.642,7.972-7.033m1.748,0c0,6.181-2.771,10.913-8.781,10.913a9.925,9.925,0,0,1-8.91-5.755v13.941H381.7V470.18h2.293v5.414a9.995,9.995,0,0,1,8.91-5.926c6.011,0,8.781,4.9,8.781,11.255"
+                                            transform="translate(-261.467 -461.594)"
+                                            fill="currentColor"
+                                        />
+                                        <path
+                                            d="M431.269,480.923c0-4.518-2.132-7.2-7.972-7.2-5.712,0-7.887,2.686-7.887,7.2,0,4.391,2.175,7.033,7.887,7.033,5.84,0,7.972-2.642,7.972-7.033m1.748,0c0,6.181-2.772,10.913-8.782,10.913a9.925,9.925,0,0,1-8.909-5.755v13.941h-2.293V470.18h2.293v5.414a9.995,9.995,0,0,1,8.909-5.926c6.011,0,8.782,4.9,8.782,11.255"
+                                            transform="translate(-269.935 -461.594)"
+                                            fill="currentColor"
+                                        />
+                                        <path
+                                            d="M459.283,470.226V482.5c-.383,3.708-5.115,5.755-8.867,5.755-3.1,0-4.57-2.348-5.263-4.567-.508-1.729-.6-8.084-.62-11.406v-2.056h-2.161v15.385c0,4.305,4.25,6.694,8.342,6.694,3.753,0,7.086-1.8,8.4-4.187v6.238c0,.02-.017,3.173-1.37,3.436-1.846.359-3.7-1.9-6.673-3.093a5.453,5.453,0,0,0-1.862-.34v0s-4.2-.393-5.285,3.392h0a5.712,5.712,0,0,0-.239,2.448h1.7c-.072-.611-.147-3.051,3.485-1.916v.007a13.891,13.891,0,0,1,2.708,1.178c.447.268,2.861,1.669,4.5,1.669a4.5,4.5,0,0,0,4.036-2.686l.005-.01.005-.01h0a11.143,11.143,0,0,0,.83-4.073V470.226Z"
+                                            transform="translate(-277.865 -461.745)"
+                                            fill="currentColor"
+                                        />
+                                        <path
+                                            d="M321.221,458.6h2.4v14.212h.128a9.908,9.908,0,0,1,9.362-6.128c4.723,0,7.775,3.574,7.775,8.893V488.39h-2.158V476.858c0-4.127-1.319-6.128-6.766-6.128-7.106,0-8.255,4.34-8.255,7.234V488.39h-2.485Z"
+                                            transform="translate(-245.121 -458.604)"
+                                            fill="currentColor"
+                                        />
+                                    </g>
+                                    <path
+                                        d="M517.271,458h2.293v18.2l10.785-9.506h5.669l-7.843,6.906,8.653,14.238h-2.344l-7.759-13-7.162,6.267v6.735h-2.293Z"
+                                        transform="translate(-81.172 0)"
+                                        fill="currentColor"
+                                    />
+                                    <rect
+                                        width="2.839" height="21.144"
+                                        transform="translate(457.812 466.696)"
+                                        fill="currentColor"
+                                    />
+                                    <g transform="translate(414.982 466.1)">
+                                        <path
+                                            d="M555.17,469.7h2.208v5.542h.128a10.793,10.793,0,0,1,9.924-6.138c4.732,0,7.375,3.581,7.375,8.909v12.832h-2.293V479.288c0-4.135-1.322-6.138-6.779-6.138-7.118,0-8.27,4.347-8.27,7.246v10.445H555.17Z"
+                                            transform="translate(-506.397 -469.1)"
+                                            fill="currentColor"
+                                        />
+                                        <path
+                                            d="M488.333,482.751h1.727c0,2.779,1.979,4.547,7.788,4.547,5.6,0,7.029-1.179,7.029-2.779,0-4.42-16.207-.925-16.207-9.219,0-2.651,2.105-6.061,8.757-6.061,7.661,0,8.377,4.63,8.377,6.861h-1.727c0-1.094-.336-2.862-6.946-2.862-5.6,0-6.735,1.179-6.735,2.1,0,3.41,16.206,1.432,16.206,8.925,0,2.609-1.809,7.029-9.345,7.029-8.04,0-8.925-5.767-8.925-8.546"
+                                            transform="translate(-488.333 -469.138)"
+                                            fill="currentColor"
+                                        />
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <nav class="header__top-nav">
+                            <ul class="nav__list row">
+                                <li class="nav__item col-auto">
+                                    <a href="#" class="nav__link">
+                                        Merken
+                                    </a>
+                                </li>
+                                <li class="nav__item col-auto">
+                                    <a href="#" class="nav__link">
+                                        Skin health attitude
+                                    </a>
+                                </li>
+                                <li class="nav__item col-auto">
+                                    <a href="#" class="nav__link">
+                                        Producten
+                                    </a>
+                                </li>
+                                <li class="nav__item col-auto">
+                                    <a href="#" class="nav__link">
+                                        Verkooppunten
+                                    </a>
+                                </li>
+                                <li class="nav__item col-auto">
+                                    <a href="#" class="nav__link">
+                                        Over ons
+                                    </a>
+                                </li>
+                                <li class="nav__item col-auto">
+                                    <a href="#" class="nav__link">
+                                        Professional
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="landing">
+            <div class="landing__background">
+                <video
+                    src="./assets/video.mp4"
+                    autoplay muted loop playsinline preload="auto"
+                ></video>
+            </div>
+            <div class="container">
+                <h1>skin health attitude</h1>
+            </div>
+        </section>
+        <div class="container spacing">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 text-center">
+                    <img
+                        src="./assets/logo.svg"
+                        alt="The Happy Skin" class="mb"
+                        width="107" height="137"
+                    />
+                    <p class="h4">
+                        sinds 1992 exclusieve distributeur in de Benelux en Frankrijk van Environ, Jane Iredale en Advanced nutrition programme
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container spacing">
+            <div class="row justify-content-center row--packshots">
+                <div class="col-md-6 col-lg-4">
+                    <img
+                        src="./assets/THS_PACKSHOTS_Hands_161A1422_WEB.jpg"
+                        alt="Advanced nutrition programme" class="mb w-100"
+                        width="392" height="505"
+                    />
+                    <p class="mb">
+                        Maak je huid van binnenuit gezond, door ze – letterlijk – te voeden met de juiste bouwstoffen uit het Advanced Nutrition Programme (ANP).
+                    </p>
+                    <a href="#" class="btn btn--primary">More info</a>
+                </div>
+                <div class="col-md-6 col-lg-4 pt-lg">
+                    <img
+                        src="./assets/THS_PACKSHOTS_Hands_161A0998_WEB.jpg"
+                        alt="Environ" class="mb w-100"
+                        width="392" height="505"
+                    />
+                    <p class="mb">
+                        De producten van Environ bevatten vitamine A, die je huidcellen verzorgt en herstelt. De helende werking van vitamine A is wetenschappelijk bewezen.
+                    </p>
+                    <a href="#" class="btn btn--primary">More info</a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <img
+                        src="./assets/THS_PACKSHOTS_Hands_161A1212_WEB.jpg"
+                        alt="Jane Iredale - the skin care makeup" class="mb w-100"
+                        width="392" height="505"
+                    />
+                    <p class="mb">
+                        Jane Iredale is dé referentie op vlak van minerale make-up. Werk je stralend gezonde huid af met de juiste accenten.
+                    </p>
+                    <a href="#" class="btn btn--primary">More info</a>
+                </div>
+            </div>
+        </div>
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card--large bg-secondary">
+                        <div class="card__content">
+                            <h2>the happy skin academy</h2>
+                            <p>
+                                In onze Skin Care Academy trainen we professionals om hun klanten nóg beter te helpen met op maat gemaakte behandelingen.
+                            </p>
+                        </div>
+                        <a href="#" class="btn btn--secondary">Opleidingen</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card card--large bg-primary">
+                        <div class="card__content">
+                            <h2>in jouw instituut</h2>
+                            <p>
+                                Wij geloven dat iedereen een gezonde huid verdient. Professioneel advies en de juiste huidroutine – nourish, care, finish – zorgen ervoor dat elke huid gaat stralen.
+                            </p>
+                        </div>
+                        <a href="#" class="btn btn--secondary">Onze aanpak</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container spacing">
+            <div class="row justify-content-between">
+                <div class="col-md-6 col-lg-5 spacing">
+                    <p class="mb">
+                        Drie stappen die je brengen tot de beste huid. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    </p>
+                    <ol class="list-unstyled steps">
+                        <li class="step__item">
+                            <a href="#" class="step btn btn--arrow">nourish</a>
+                        </li>
+                        <li class="step__item">
+                            <a href="#" class="step btn btn--arrow">care</a>
+                        </li>
+                        <li class="step__item">
+                            <a href="#" class="step btn btn--arrow">finish</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-md-6 col-xl-5">
+                    <img
+                        src="./assets/HPS-15.jpg"
+                        alt="" aria-hidden="true" class="steps__image"
+                        width="602" height="855"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-secondary spacing carousel-container">
+            <div class="container pt">
+                <h2 class="h6">Wat onze klanten zeggen</h2>
+                <div class="glide js-glide">
+                    <div class="glide__arrows row">
+                        <div class="col-auto">
+                            <button
+                                class="glide__arrow glide__arrow--prev js-glide-prev"
+                                aria-label="Previous"
+                            ></button>
+                        </div>
+                        <div class="col-auto">
+                            <button
+                                class="glide__arrow glide__arrow--next js-glide-next"
+                                aria-label="Next"
+                            ></button>
+                        </div>
+                    </div>
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides list-unstyled">
+                            <li class="glide__slide">
+                                <blockquote>
+                                    De huid is een complex orgaan en vereist de juiste aanpak. Daarom kiezen we onze producten heel zorgvuldig. Nourish, care, finish: met deze attitude laten we ook jouw huid stralen.
+                                </blockquote>
+                                <p>Happy Skinners met attitude </p>
+                            </li>
+                            <li class="glide__slide">
+                                <blockquote>
+                                    De huid is een complex orgaan en vereist de juiste aanpak. Daarom kiezen we onze producten heel zorgvuldig. Nourish, care, finish: met deze attitude laten we ook jouw huid stralen.
+                                </blockquote>
+                                <p>Happy Skinners met attitude </p>
+                            </li>
+                            <li class="glide__slide">
+                                <blockquote>
+                                    De huid is een complex orgaan en vereist de juiste aanpak. Daarom kiezen we onze producten heel zorgvuldig. Nourish, care, finish: met deze attitude laten we ook jouw huid stralen.
+                                </blockquote>
+                                <p>Happy Skinners met attitude </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-black text-white challenge">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-lg-1 col-xl-5 spacing">
+                        <div class="spacing">
+                            <h2>100 dagen huiddaging</h2>
+                            <p class="mb">
+                                Wat als … je 100 dagen lang de producten van the happy skin gebruikt? Deze vrouwen gingen de huiddaging aan!
+                            </p>
+                            <a href="#" class="btn btn--primary mb--small">Ontdek hun verhalen</a>
+                            <div>
+                                <a href="#" class="btn btn--text">
+                                    Vind een professional in je buurt
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img
+                src="./assets/HPS-25.jpg"
+                alt="Huiddaging" class="challenge__image"
+                width="632" height="699"
+            />
+        </div>
+
+        <div class="spacing container">
+            <div class="contact">
+                <div class="row">
+                    <div class="col-lg-6 col-xl-4 offset-xl-4">
+                        <div class="card bg-white">
+                            <div class="card__content">
+                                <h2 class="h3">
+                                    Maak een afspraak voor je huidanalyse
+                                </h2>
+                                <p>
+                                    the happy skin werkt samen met erkende professionals die weten wat goed is voor jouw specifieke huidtype.
+                                </p>
+                            </div>
+                            <a href="#" class="btn btn--text">
+                                Vind een professional in je buurt
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="card bg-black text-white">
+                            <div class="card__content">
+                                <h2 class="h3">
+                                    Boek een online huidconsult
+                                </h2>
+                                <p>
+                                    the happy skin werkt samen met erkende professionals die weten wat goed is voor jouw specifieke huidtype.
+                                </p>
+                            </div>
+                            <a href="#" class="btn btn--primary">
+                                Get in touch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="spacing carousel-container">
+            <div class="container">
+                <h2 class="h3">the happy skin magazine</h2>
+                <div class="glide js-glide js-glide-small">
+                    <div class="glide__arrows row">
+                        <div class="col-auto">
+                            <button
+                                class="glide__arrow glide__arrow--prev js-glide-prev"
+                                aria-label="Previous"
+                            ></button>
+                        </div>
+                        <div class="col-auto">
+                            <button
+                                class="glide__arrow glide__arrow--next js-glide-next"
+                                aria-label="Next"
+                            ></button>
+                        </div>
+                    </div>
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides list-unstyled">
+                            <li class="glide__slide">
+                                <img
+                                    src="./assets/HPS-44.jpg"
+                                    alt="Afbeelding buik" class="img-inline mb"
+                                    width="393" height="505"
+                                />
+                                <h3 class="h5">Small title</h3>
+                                <p class="mb">
+                                    Body placeholder for text paragraph. A paragraph is a self-contained unit of text dealing with a particular point or idea.
+                                </p>
+                                <a href="#" class="btn btn--secondary">Learn more</a>
+                            </li>
+                            <li class="glide__slide">
+                                <img
+                                    src="./assets/THS_PACKSHOTS_Hands_161A1374_WEB.jpg"
+                                    alt="Now gorgeous inside and out" class="img-inline mb"
+                                    width="393" height="505"
+                                />
+                                <h3 class="h5">Small title</h3>
+                                <p class="mb">
+                                    Body placeholder for text paragraph. A paragraph is a self-contained unit of text dealing with a particular point or idea.
+                                </p>
+                                <a href="#" class="btn btn--secondary">Learn more</a>
+                            </li>
+                            <li class="glide__slide">
+                                <img
+                                    src="./assets/HPS-15-small.jpg"
+                                    alt="Afbeelding" class="img-inline mb"
+                                    width="393" height="505"
+                                />
+                                <h3 class="h5">Small title</h3>
+                                <p class="mb">
+                                    Body placeholder for text paragraph. A paragraph is a self-contained unit of text dealing with a particular point or idea.
+                                </p>
+                                <a href="#" class="btn btn--secondary">Learn more</a>
+                            </li>
+                            <li class="glide__slide">
+                                <img
+                                    src="./assets/HPS-19.jpg"
+                                    alt="Afbeelding" class="img-inline mb"
+                                    width="393" height="505"
+                                />
+                                <h3 class="h5">Small title</h3>
+                                <p class="mb">
+                                    Body placeholder for text paragraph. A paragraph is a self-contained unit of text dealing with a particular point or idea.
+                                </p>
+                                <a href="#" class="btn btn--secondary">Learn more</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-between spacing">
+                <div class="col-auto">
+                    <h2 class="h6">the happy skin</h2>
+                    <p>De Dekt 30, 1650 Beersel - België</p>
+                    <p>
+                        <a href="tel:+3223812979">+32 2 381 29 79</a>
+                    </p>
+                    <p>
+                        <a href="mailto:info@homeofthehappyskin.com">
+                            info@homeofthehappyskin.com
+                        </a>
+                    </p>
+                </div>
+                <div class="col-auto">
+                    <h2 class="h6">
+                        Interessante links
+                    </h2>
+                    <ul class="list-unstyled">
+                        <li>
+                            <p><a href="#">Veelgestelde vragen</a></p>
+                        </li>
+                        <li>
+                            <p><a href="#">100 dagen huiddaging</a></p>
+                        </li>
+                        <li>
+                            <p><a href="#">Jobs</a></p>
+                        </li>
+                        <li>
+                            <p><a href="#">Partnerportaal</a></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-5 col-xl-4 col-xxl-3">
+                    <h2 class="h6">Schrijf je in voor onze nieuwsbrief </h2>
+                    <p class="mb">
+                        Blijf op de hoogte van nieuwe producten en kortingsacties en krijg wekelijks tips voor een gezond huid.
+                    </p>
+                    <a href="#" class="btn btn--primary w-100">
+                        Subscribe
+                    </a>
+                </div>
+            </div>
+            <div class="row footer__bottom">
+                <div class="col">
+                    <ul class="list-unstyled row">
+                        <li class="col-auto">
+                            &copy; 2021 the happy skin
+                        </li>
+                        <li class="col-auto">
+                            <a href="#">Cookie policy</a>
+                        </li>
+                        <li class="col-auto">
+                            <a href="#">Privacy policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <a href="//codedor.be" target="_blank" rel="noopener noreferrer">
+                        Webdesign by Code d'Or
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
